@@ -308,22 +308,16 @@
 
       <!-- Section 1: User Info Card -->
       <section style="padding: 20px 16px 0;">
-        <div data-dom-id="cta-edit-profile" style="display: flex; align-items: center; gap: 14px; cursor: pointer; padding: 4px 0;">
-          <!-- Avatar -->
-          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-bg-tertiary); border: 2px solid var(--color-accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
-          </div>
-          <!-- Name & Level -->
-          <div style="flex: 1; min-width: 0;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="font-size: 18px; font-weight: 600; color: #F0E6DA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">善信·明心</span>
-              <span style="display: inline-flex; align-items: center; height: 20px; padding: 0 8px; border-radius: 999px; background: rgba(200, 169, 110, 0.15); color: var(--color-accent); font-size: 11px; font-weight: 500; white-space: nowrap; flex-shrink: 0;">居士</span>
-            </div>
-            <p style="font-size: 13px; color: var(--color-text-tertiary); margin-top: 4px;">修心向善 · 福慧双增</p>
-          </div>
-          <!-- Chevron -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="profile.html" data-dom-id="cta-edit-profile" style="display: flex; align-items: center; gap: 14px; cursor: pointer; padding: 4px 0;">
+        <img src="../assets/default-avatar.jpg" alt="头像" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
+        <div style="flex: 1;">
+          <div style="font-size: 18px; font-weight: 700; color: var(--color-text-primary);">玄学爱好者</div>
+          <div style="font-size: 13px; color: var(--color-text-tertiary); margin-top: 2px;">ID: DF20250101</div>
         </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
 
         <!-- Stats Row -->
         <div style="display: flex; align-items: center; margin-top: 16px; padding: 14px 0; border-top: 1px solid rgba(200, 169, 110, 0.08); border-bottom: 1px solid rgba(200, 169, 110, 0.08);">

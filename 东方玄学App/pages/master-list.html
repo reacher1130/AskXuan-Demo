@@ -200,11 +200,11 @@
   <!-- 1. Top Navigation Bar (sticky, 44px) -->
   <div class="top-nav" style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; height: 44px; padding: 0 16px; background: rgba(28, 18, 16, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
     <!-- Back arrow -->
-    <div data-dom-id="back-home" style="cursor: pointer; padding: 4px; display: flex; align-items: center;">
+    <a href="home.html" data-dom-id="back-home" style="cursor: pointer; padding: 4px; display: flex; align-items: center;">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M15 19l-7-7 7-7" stroke="#C8A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-    </div>
+    </a>
     <!-- Title -->
     <div style="flex: 1; text-align: center; font-size: 17px; font-weight: 700; color: #C8A96E; font-family: 'Noto Serif SC', serif;">
       找师傅
@@ -307,7 +307,7 @@
     <div class="master-list">
 
       <!-- Master 1: 释明远 -->
-      <div class="master-card" data-dom-id="cta-master-profile">
+      <a href="master-profile.html" class="master-card" data-dom-id="cta-master-profile">
         <div class="avatar-wrapper">
           <img src="../assets/master-avatar-shimingyuan.jpg" alt="释明远" width="56" height="56">
           <div class="status-dot online"></div>
@@ -330,10 +330,10 @@
             <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;388起</div>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Master 2: 清风道长 -->
-      <div class="master-card" data-dom-id="cta-master-profile">
+      <a href="master-profile.html" class="master-card" data-dom-id="cta-master-profile">
         <div class="avatar-wrapper">
           <img src="../assets/master-avatar-qingfeng.jpg" alt="清风道长" width="56" height="56">
           <div class="status-dot online"></div>
@@ -343,8 +343,86 @@
             <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">清风道长</div>
             <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">白云观 · 高功法师</div>
             <div class="specialty-tags">
-              <span class="specialty-tag">内丹术</span>
-              <span class="specialty-tag">辟谷养生</span>
+              <span class="specialty-tag">道教符箓</span>
+              <span class="specialty-tag">风水堪舆</span>
+            </div>
+          </div>
+          <div class="master-bottom" style="margin-top: 6px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.8</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span style="color: #5B8C5A; font-size: 11px;">在线</span>
+            </div>
+            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;288起</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Master 3: 扎西多吉 -->
+      <a href="master-profile.html" class="master-card" data-dom-id="cta-master-profile">
+        <div class="avatar-wrapper">
+          <img src="../assets/master-avatar-zhaxiduoji.jpg" alt="扎西多吉" width="56" height="56">
+          <div class="status-dot online"></div>
+        </div>
+        <div class="master-info">
+          <div>
+            <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">扎西多吉</div>
+            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">塔尔寺 · 活佛</div>
+            <div class="specialty-tags">
+              <span class="specialty-tag">唐卡解读</span>
+              <span class="specialty-tag">藏传密法</span>
+            </div>
+          </div>
+          <div class="master-bottom" style="margin-top: 6px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.9</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span style="color: #5B8C5A; font-size: 11px;">在线</span>
+            </div>
+            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;458起</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Master 4: 智海法师 -->
+      <a href="master-profile.html" class="master-card" data-dom-id="cta-master-profile">
+        <div class="avatar-wrapper">
+          <img src="../assets/master-avatar-zhihai.jpg" alt="智海法师" width="56" height="56">
+          <div class="status-dot offline"></div>
+        </div>
+        <div class="master-info">
+          <div>
+            <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">智海法师</div>
+            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">灵隐寺 · 首座</div>
+            <div class="specialty-tags">
+              <span class="specialty-tag">华严经义</span>
+              <span class="specialty-tag">禅修指导</span>
+            </div>
+          </div>
+          <div class="master-bottom" style="margin-top: 6px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.7</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span style="color: #8A7A6A; font-size: 11px;">离线</span>
+            </div>
+            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;328起</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Master 5: 妙音法师 -->
+      <a href="master-profile.html" class="master-card" data-dom-id="cta-master-profile">
+        <div class="avatar-wrapper">
+          <img src="../assets/master-avatar-miaoyin.jpg" alt="妙音法师" width="56" height="56">
+          <div class="status-dot online"></div>
+        </div>
+        <div class="master-info">
+          <div>
+            <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">妙音法师</div>
+            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">普陀山 · 尼师</div>
+            <div class="specialty-tags">
+              <span class="specialty-tag">观音法门</span>
+              <span class="specialty-tag">诵经超度</span>
             </div>
           </div>
           <div class="master-bottom" style="margin-top: 6px;">
@@ -356,88 +434,10 @@
             <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;268起</div>
           </div>
         </div>
-      </div>
-
-      <!-- Master 3: 扎西多吉 -->
-      <div class="master-card" data-dom-id="cta-master-profile">
-        <div class="avatar-wrapper">
-          <img src="../assets/master-avatar-zhaxiduoji.jpg" alt="扎西多吉" width="56" height="56">
-          <div class="status-dot offline"></div>
-        </div>
-        <div class="master-info">
-          <div>
-            <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">扎西多吉</div>
-            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">大昭寺 · 法师</div>
-            <div class="specialty-tags">
-              <span class="specialty-tag">藏密修行</span>
-              <span class="specialty-tag">灌顶加持</span>
-            </div>
-          </div>
-          <div class="master-bottom" style="margin-top: 6px;">
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.7</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <span style="color: #8A7A6A; font-size: 11px;">离线</span>
-            </div>
-            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;458起</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Master 4: 智海法师 -->
-      <div class="master-card" data-dom-id="cta-master-profile">
-        <div class="avatar-wrapper">
-          <img src="../assets/master-avatar-zhihai.jpg" alt="智海法师" width="56" height="56">
-          <div class="status-dot online"></div>
-        </div>
-        <div class="master-info">
-          <div>
-            <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">智海法师</div>
-            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">灵隐寺 · 住持</div>
-            <div class="specialty-tags">
-              <span class="specialty-tag">天台宗</span>
-              <span class="specialty-tag">止观禅修</span>
-            </div>
-          </div>
-          <div class="master-bottom" style="margin-top: 6px;">
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">5.0</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <span style="color: #5B8C5A; font-size: 11px;">在线</span>
-            </div>
-            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;328起</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Master 5: 妙音法师 -->
-      <div class="master-card" data-dom-id="cta-master-profile">
-        <div class="avatar-wrapper">
-          <img src="../assets/master-avatar-miaoyin.jpg" alt="妙音法师" width="56" height="56">
-          <div class="status-dot online"></div>
-        </div>
-        <div class="master-info">
-          <div>
-            <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">妙音法师</div>
-            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">法门寺 · 法师</div>
-            <div class="specialty-tags">
-              <span class="specialty-tag">净土宗</span>
-              <span class="specialty-tag">念佛修行</span>
-            </div>
-          </div>
-          <div class="master-bottom" style="margin-top: 6px;">
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.9</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <span style="color: #5B8C5A; font-size: 11px;">在线</span>
-            </div>
-            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;188起</div>
-          </div>
-        </div>
-      </div>
+      </a>
 
       <!-- Master 6: 张至顺道长 -->
-      <div class="master-card" data-dom-id="cta-master-profile">
+      <a href="master-profile.html" class="master-card" data-dom-id="cta-master-profile">
         <div class="avatar-wrapper">
           <img src="../assets/master-avatar-zhangzhishun.jpg" alt="张至顺道长" width="56" height="56">
           <div class="status-dot offline"></div>
@@ -445,22 +445,22 @@
         <div class="master-info">
           <div>
             <div style="font-size: 16px; font-weight: 700; color: #F0E6DA; margin-bottom: 2px;">张至顺道长</div>
-            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">青羊宫 · 方丈</div>
+            <div style="font-size: 13px; color: #8A7A6A; margin-bottom: 6px;">武当山 · 道长</div>
             <div class="specialty-tags">
-              <span class="specialty-tag">全真派</span>
-              <span class="specialty-tag">内丹养生</span>
+              <span class="specialty-tag">内丹修炼</span>
+              <span class="specialty-tag">太极养生</span>
             </div>
           </div>
           <div class="master-bottom" style="margin-top: 6px;">
             <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.8</span>
+              <span style="color: #C8A96E; font-size: 13px; font-weight: 600;">4.9</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A96E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               <span style="color: #8A7A6A; font-size: 11px;">离线</span>
             </div>
-            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;588起</div>
+            <div style="font-size: 15px; font-weight: 700; color: #C45A3C;">&yen;518起</div>
           </div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>

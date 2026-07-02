@@ -58,15 +58,16 @@
     <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
 
     <!-- Back button (top-left) -->
-    <button
+    <a
+      href="home.html"
       data-dom-id="back-home"
       class="absolute top-4 left-4 z-10 flex items-center justify-center w-9 h-9 rounded-full"
-      style="background: rgba(28, 18, 16, 0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"
+      style="background: rgba(28, 18, 16, 0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); text-decoration:none;"
     >
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="15 18 9 12 15 6"></polyline>
       </svg>
-    </div>
+    </a>
   </div>
 
   <!-- ===== Content Area ===== -->
@@ -143,15 +144,16 @@
 
   <!-- ===== CTA Section ===== -->
   <div class="px-5 mt-6">
-    <button
+    <a
+      href="booking.html"
       data-dom-id="cta-booking-temple"
       class="w-full h-12 rounded-xl text-white text-base font-bold flex items-center justify-center transition-all duration-200"
-      style="background: #B5453A; box-shadow: 0 4px 16px rgba(181, 69, 58, 0.35);"
+      style="background: #B5453A; box-shadow: 0 4px 16px rgba(181, 69, 58, 0.35); text-decoration:none; display:block;"
       onmouseover="this.style.background='#CC5A4F'"
       onmouseout="this.style.background='#B5453A'"
     >
       立即预约祈福
-    </div>
+    </a>
     <p class="text-xs text-txt-tertiary text-center mt-3">预约成功后可在线参与</p>
   </div>
 
@@ -160,10 +162,11 @@
     <h2 class="text-lg font-bold text-txt-primary mb-3">相关推荐</h2>
 
     <!-- Recommendation Card 1: 少林寺 -->
-    <div
+    <a
+      href="temple-detail.html"
       data-dom-id="rec-card-shaolinsi"
       class="flex items-center gap-3 py-3 cursor-pointer"
-      style="border-bottom: 1px solid rgba(200, 169, 110, 0.08);"
+      style="border-bottom: 1px solid rgba(200, 169, 110, 0.08); text-decoration:none; display:block;"
     >
       <img
         src="../assets/temple-card-shaolinsi.jpg"
@@ -183,12 +186,14 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A7A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
-    </div>
+    </a>
 
     <!-- Recommendation Card 2: 白马寺 -->
-    <div
+    <a
+      href="temple-detail.html"
       data-dom-id="rec-card-baimasi"
       class="flex items-center gap-3 py-3 cursor-pointer"
+      style="text-decoration:none; display:block;"
     >
       <img
         src="../assets/temple-card-baimasi.jpg"
@@ -208,7 +213,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A7A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
-    </div>
+    </a>
   </div>
 
 </body>
