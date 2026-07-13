@@ -12,6 +12,7 @@
     .upload{display:flex;align-items:center;gap:10px;padding:12px;border:1px dashed #6A5548;border-radius:8px;color:#C5B097;font-size:13px}.upload input{max-width:100%;color:#8A7A6A}
     .btn{width:100%;height:44px;border:0;border-radius:8px;background:#C45A3C;color:white;font-weight:600;margin-top:14px}.btn:disabled{background:#44342C;color:#8A7A6A}
     .status{padding:12px;border-radius:8px;background:#1C1210;color:#8A7A6A;font-size:12px;line-height:1.6}.tag{display:inline-block;padding:3px 8px;border-radius:4px;background:rgba(91,140,90,.15);color:#7EAD7D}
+    .tabs{display:grid;grid-template-columns:1fr 1fr;padding:3px;background:#1C1210;border-radius:8px}.tabs button{border:0;padding:8px;background:transparent;color:#8A7A6A;border-radius:6px}.tabs button.active{background:#C8A96E;color:#1C1210}.row{display:flex;gap:8px}.row .btn{flex:1}.content-item{padding:12px 0;border-top:1px solid rgba(200,169,110,.12)}
   </style>
 </head>
 <body style="background:#1C1210;color:#F0E6DA;">
@@ -22,11 +23,25 @@
     </header>
 
     <section class="section">
-      <h2>发布短视频</h2>
-      <div class="field"><label>视频封面</label><div class="upload">▣ <input type="file" accept="image/*" id="cover"></div></div>
-      <div class="field"><label>视频文件</label><div class="upload">▶ <input type="file" accept="video/*" id="video"></div></div>
-      <button class="btn" id="upload" disabled>上传视频</button>
-      <div class="status" id="upload-status" style="margin-top:12px;">等待选择封面与视频。上传完成后显示处理状态、审核状态和真实播放入口。</div>
+      <h2>发布内容</h2>
+      <div class="tabs"><button class="active" data-type="video">短视频</button><button data-type="article">图文</button></div>
+      <div class="field"><label>标题</label><input id="title" placeholder="请输入内容标题" style="width:100%;box-sizing:border-box;padding:10px;background:#1C1210;border:1px solid #44342C;border-radius:8px;color:#F0E6DA"></div>
+      <div class="field"><label>正文</label><textarea rows="3" placeholder="分享开示、修习或文化内容" style="width:100%;box-sizing:border-box;padding:10px;background:#1C1210;border:1px solid #44342C;border-radius:8px;color:#F0E6DA"></textarea></div>
+      <div id="video-fields">
+        <div class="field"><label>视频封面</label><div class="upload">▣ <input type="file" accept="image/*" id="cover"></div></div>
+        <div class="field"><label>视频文件</label><div class="upload">▶ <input type="file" accept="video/*" id="video"></div></div>
+      </div>
+      <div id="article-fields" class="field" style="display:none"><label>图文图片（1-9 张）</label><div class="upload">▣ <input type="file" accept="image/*" multiple id="images"></div></div>
+      <button class="btn" id="upload" disabled>上传素材</button>
+      <div class="status" id="upload-status" style="margin-top:12px;">媒体上传完成后保存 mediaId；帖子不保存临时 URL。</div>
+      <div class="row"><button class="btn" id="draft" disabled>保存草稿</button><button class="btn" id="submit" disabled>提交审核</button></div>
+    </section>
+
+    <section class="section">
+      <h2>我的内容</h2>
+      <div class="content-item"><div><strong>三分钟观呼吸入门</strong> <span class="tag">已发布</span></div><div class="status" style="margin-top:8px">视频 · 2.3 万赞 · 186 评论 <button style="float:right">下架</button></div></div>
+      <div class="content-item"><div><strong>每日静心小记</strong> <span class="tag" style="color:#D5A75E">审核中</span></div><div class="status" style="margin-top:8px">图文 · 平台审核中</div></div>
+      <div class="content-item"><div><strong>禅修问答整理</strong> <span class="tag" style="color:#D96B5F">已驳回</span></div><div class="status" style="margin-top:8px">驳回原因：封面含联系方式 <button style="float:right">编辑</button></div></div>
     </section>
 
     <section class="section">
@@ -36,8 +51,9 @@
     </section>
   </div></div>
   <script>
-    const cover=document.getElementById('cover'),video=document.getElementById('video'),button=document.getElementById('upload'),status=document.getElementById('upload-status');
-    function update(){button.disabled=!(cover.files.length&&video.files.length)} cover.addEventListener('change',update);video.addEventListener('change',update);
-    button.addEventListener('click',()=>{button.disabled=true;status.innerHTML='<span class="tag">上传中</span> 正在获取凭证并直传媒体 Provider…';setTimeout(()=>{status.innerHTML='<span class="tag">待审核</span> 对象已校验，视频可播放；等待审核回调。';button.disabled=false},700)});
+    const cover=document.getElementById('cover'),video=document.getElementById('video'),images=document.getElementById('images'),button=document.getElementById('upload'),status=document.getElementById('upload-status'),title=document.getElementById('title'),draft=document.getElementById('draft'),submit=document.getElementById('submit');let type='video';
+    function update(){button.disabled=type==='video'?!(cover.files.length&&video.files.length):!(images.files.length>0&&images.files.length<=9)} cover.addEventListener('change',update);video.addEventListener('change',update);images.addEventListener('change',update);
+    document.querySelectorAll('.tabs button').forEach(tab=>tab.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));tab.classList.add('active');type=tab.dataset.type;document.getElementById('video-fields').style.display=type==='video'?'block':'none';document.getElementById('article-fields').style.display=type==='article'?'block':'none';update()});
+    button.addEventListener('click',()=>{button.disabled=true;status.innerHTML='<span class="tag">上传中</span> 正在获取凭证并直传媒体 Provider…';setTimeout(()=>{status.innerHTML='<span class="tag">可用</span> 对象已校验并生成 mediaId，可保存草稿或提交审核。';draft.disabled=submit.disabled=!title.value.trim();button.disabled=false},700)});
   </script>
 </body></html>
