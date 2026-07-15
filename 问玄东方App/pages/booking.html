@@ -281,7 +281,7 @@
           <path d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M4.93 19.07L6.34 17.66M17.66 6.34L19.07 4.93" stroke="#C45A3C" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <div style="font-size: 13px; font-weight: 500; color: #F0E6DA;">上午</div>
-        <div style="font-size: 11px; color: #C45A3C; margin-top: 2px;">9:00-12:00</div>
+		<div style="font-size: 11px; color: #C45A3C; margin-top: 2px;">9:00-12:00 · 余8</div>
       </div>
       <!-- 下午 -->
       <div class="time-slot" data-dom-id="time-afternoon">
@@ -290,7 +290,7 @@
           <path d="M12 6V12L16 14" stroke="#C8A96E" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <div style="font-size: 13px; font-weight: 500; color: #C5B097;">下午</div>
-        <div style="font-size: 11px; color: #8A7A6A; margin-top: 2px;">14:00-17:00</div>
+		<div style="font-size: 11px; color: #8A7A6A; margin-top: 2px;">13:00-17:00 · 余3</div>
       </div>
       <!-- 晚上 -->
       <div class="time-slot" data-dom-id="time-evening">
@@ -298,7 +298,7 @@
           <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" stroke="#C8A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div style="font-size: 13px; font-weight: 500; color: #C5B097;">晚上</div>
-        <div style="font-size: 11px; color: #8A7A6A; margin-top: 2px;">19:00-21:00</div>
+		<div style="font-size: 11px; color: #8A7A6A; margin-top: 2px;">18:00-21:00 · 已满</div>
       </div>
     </div>
   </section>
@@ -359,7 +359,7 @@
           <circle cx="12" cy="12" r="10" stroke="#8A7A6A" stroke-width="1.5"/>
           <path d="M12 16V12M12 8H12.01" stroke="#8A7A6A" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        预约成功后24小时内可免费取消
+		服务费以服务端当前价格为准；演示环境使用模拟支付
       </div>
     </div>
   </section>
@@ -380,7 +380,7 @@
     </div>
   </div>
 
-  <!-- ===== Interactive Logic (visual only, no real backend) ===== -->
+	<!-- ===== Interactive Logic (prototype only; real client uses temple services + booking availability APIs) ===== -->
   <script>
     // Service card selection (radio behavior)
     document.querySelectorAll('.service-card').forEach(card => {
